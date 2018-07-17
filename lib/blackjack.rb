@@ -58,6 +58,7 @@ end
 def runner
   welcome
   sum = initial_round
+  sum += hit?(sum)
   until sum > 21 do
     sum += hit?(sum)
     display_card_total(sum)
