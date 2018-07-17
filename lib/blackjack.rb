@@ -58,5 +58,7 @@ end
 def runner
   welcome
   sum = initial_round
-  hit?(sum)
+  until sum == 21 do
+    sum += hit?(sum)
+  end
 end
